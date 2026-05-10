@@ -1,0 +1,28 @@
+{
+  "project_name": "fantasy-football-analytics",
+  "description": "ML-powered RB PPG prediction with XGBoost, Optuna tuning, SHAP explainability",
+  "documentation_url": "https://github.com/Skyritt649/fantasy-football-analytics",
+  "permissions": {
+    "read": {
+      "paths": [
+        "**.ipynb",
+        "**.csv",
+        "**.parquet",
+        "README.md",
+        "CLAUDE.md",
+        ".gitignore",
+        "LICENSE"
+      ]
+    },
+    "run": {
+      "commands": [
+        "jupyter notebook",
+        "python -m pip",
+        "python train_rb_ppg_model.py",
+        "python plot_2025_comparison.py",
+        "git"
+      ]
+    }
+  },
+  "notes": "See CLAUDE.md for full codebase guide. Data pipeline in RB_Dataset_Builder.ipynb generates rb_features_2015_2025.csv (1,229 RB-seasons, 61 features). Model training outputs predictions to model_output/ directory."
+}
